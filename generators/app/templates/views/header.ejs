@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+  </head>
+  <body>
+    <div class="ui secondary pointing menu">
+      <a class="item" href="/">
+        导航一
+      </a>
+      <a class="item" href="/">
+        导航二
+      </a>
+    </div>
+    <script type="text/javascript">
+      $(function(){
+        $('body>.menu a').each(function(){
+          if (location.pathname.match($(this).attr('href'))){
+            $(this).addClass('active')
+          } else {
+            $(this).removeClass('active')
+          }
+        })
+      })
+    </script>

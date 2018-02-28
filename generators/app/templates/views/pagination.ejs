@@ -1,0 +1,51 @@
+<div class="ui floated right pagination menu">
+  <% if (currentPage > 1){%>
+    <a class="icon item" href="<%= urlPage %>">
+      <i class="angle double left icon"></i>
+    </a>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage-2)*limit}` %>">
+      <i class="angle left icon"></i>
+    </a>
+  <%}%>
+  <% if (currentPage-3 >= 1){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage-4)*limit}` %>">
+      <%= currentPage-3 %>
+    </a>
+  <%}%>
+  <% if (currentPage-2 >= 1){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage-3)*limit}` %>">
+      <%= currentPage-2 %>
+    </a>
+  <%}%>
+  <% if (currentPage-1 >= 1){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage-2)*limit}` %>">
+      <%= currentPage-1 %>
+    </a>
+  <%}%>
+  <a class="icon item active">
+    <%= currentPage %>
+  </a>
+  <% if (currentPage+1 <= totalPage){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage)*limit}` %>">
+      <%= currentPage+1 %>
+    </a>
+  <%}%>
+  <% if (currentPage+2 <= totalPage){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage+1)*limit}` %>">
+      <%= currentPage+2 %>
+    </a>
+  <%}%>
+  <% if (currentPage+3 <= totalPage){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage+2)*limit}` %>">
+      <%= currentPage+3 %>
+    </a>
+  <%}%>
+  <% if (currentPage < totalPage){%>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(currentPage)*limit}` %>">
+      <i class="angle right icon"></i>
+    </a>
+    <a class="icon item" href="<%= `${urlPage}?offset=${(totalPage-1)*limit}` %>">
+      <i class="angle double right icon"></i>
+    </a>
+  <%}%>
+</div>
