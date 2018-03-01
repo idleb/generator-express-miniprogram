@@ -31,6 +31,7 @@ yo express-miniprogram
 
 You will get a MVC directory structure
 
+```
 ├─.eslintrc.yml  
 ├─.gitignore  
 ├─app.js  
@@ -68,6 +69,7 @@ You will get a MVC directory structure
    ├─header.ejs  
    ├─index.ejs  
    └─pagination.ejs  
+```
 
 ## Config
 
