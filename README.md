@@ -3,6 +3,8 @@
 
 Generator quickly create web server for MiniProgram, using ES6, Express, Mysql, Sequelize.
 
+DB init dependencies [knexjs](http://knexjs.org/), models init dependencies [sequelize-auto](https://www.npmjs.com/package/sequelize-auto).
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-express-miniprogram using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -29,43 +31,43 @@ yo express-miniprogram
 
 You will get a MVC directory structure
 
-├─.eslintrc.yml
-├─.gitignore
-├─app.js
-├─package.json
-├─bin/
+├─.eslintrc.yml  
+├─.gitignore  
+├─app.js  
+├─package.json  
+├─bin/  
 │  ├─www   
-├─config
-│  ├─dev.js
-│  ├─index.js
-│  ├─prod.js
-├─controllers/
-│  ├─index.js
-│  ├─upload.js
-│  ├─user.js
-├─lib/
-│  ├─cos.js
-│  ├─weixin.js
-├─models
+├─config  
+│  ├─dev.js  
+│  ├─index.js  
+│  ├─prod.js  
+├─controllers/  
+│  ├─index.js  
+│  ├─upload.js  
+│  ├─user.js  
+├─lib/  
+│  ├─cos.js  
+│  ├─weixin.js  
+├─models/  
 │  ├─index.js              
-├─public
-│  ├─favicon.ico
-│  ├─css/
+├─public/  
+│  ├─favicon.ico  
+│  ├─css/  
 │  │  ├─style.css    
-│  └─img/
+│  └─img/  
 │     └─image.png  
-├─routes
-│  ├─api.js
-│  ├─index.js
-├─tools
-│  ├─db.sql
-│  ├─initdb.js
-└─views
-   ├─error.ejs
-   ├─footer.ejs
-   ├─header.ejs
-   ├─index.ejs
-   └─pagination.ejs
+├─routes/  
+│  ├─api.js  
+│  ├─index.js  
+├─tools/  
+│  ├─db.sql  
+│  ├─initdb.js  
+└─views/  
+   ├─error.ejs  
+   ├─footer.ejs  
+   ├─header.ejs  
+   ├─index.ejs  
+   └─pagination.ejs  
 
 ## Config
 
