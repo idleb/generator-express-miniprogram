@@ -1,6 +1,6 @@
 {
   "name": "generator-express-miniprogram",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Generate an Express server for MiniProgram",
   "homepage": "",
   "author": {
@@ -78,6 +78,9 @@
       "prettier"
     ]
   },
-  "repository": "idleb/generator-express-miniprogram",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idleb/generator-express-miniprogram.git"
+  },
   "license": "MIT"
 }
