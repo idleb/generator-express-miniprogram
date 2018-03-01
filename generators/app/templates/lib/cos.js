@@ -81,7 +81,7 @@ module.exports = {
       });
     }).then(() => {
       return new Promise((resolve, reject) => {
-        // 上传图片
+        // 上传对象
         cos.putObject(params, err => {
           if (err) {
             reject(err);
@@ -90,7 +90,7 @@ module.exports = {
           }
 
           resolve({
-            url: `https://${bucket}.file.myqcloud.com/${params.audioKey}`,
+            url: `https://${bucket}.${config.cos.cdn?'file':config.cos.region}.myqcloud.com/${params.audioKey}`,
             name: params.audioKey
           });
 

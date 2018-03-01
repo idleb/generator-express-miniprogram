@@ -1,9 +1,5 @@
 const CONF = {
-  /**
-   * MySQL 配置，用来存储 session 和用户信息
-   * 若使用了腾讯云微信小程序解决方案
-   * 开发环境下，MySQL 的初始密码为您的微信小程序 appid
-   */
+  // MySQL Config
   mysql: {
     host: 'localhost',
     port: 3306,
@@ -13,7 +9,7 @@ const CONF = {
     char: 'utf8mb4',
     log: console.log // eslint-disable-line no-console
   },
-
+<% if (cos) { %>
   cos: {
     /**
      * 区域
@@ -25,10 +21,13 @@ const CONF = {
      * @see https://www.qcloud.com/document/product/436/6224
      */
     region: 'cn-north',
+    // CDN
+    cdn: false,
     // Bucket 名称
     prefix: 'dev'
   },
-
+<% } %>
+  // hostname
   host: 'http://localhost:' + this.port
 };
 

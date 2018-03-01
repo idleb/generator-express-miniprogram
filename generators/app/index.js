@@ -116,9 +116,6 @@ module.exports = class extends Generator {
 
     let files = [
       'bin/www',
-      'config/dev.js',
-      'config/index.js',
-      'config/prod.js',
       'controllers/index.js',
       'controllers/user.js',
       'lib/weixin.js',
@@ -137,7 +134,13 @@ module.exports = class extends Generator {
       '.gitignore'
     ];
 
-    let tplFiles = ['routes/api.js', 'app.js'];
+    let tplFiles = [
+      'config/dev.js',
+      'config/index.js',
+      'config/prod.js',
+      'routes/api.js',
+      'app.js'
+    ];
 
     if (this.props.cos) {
       files = files.concat(['lib/cos.js', 'controllers/upload.js']);

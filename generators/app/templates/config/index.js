@@ -1,6 +1,5 @@
 const CONF = {
   port: '3000',
-  rootPathname: '',
   // 域名
   domain: '',
 
@@ -15,11 +14,12 @@ const CONF = {
 
   // 微信开放平台 App Secret
   openAppSecret: '',
-
+<% if (cos) { %>
   // 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi
   qcloudAppId: '',
   qcloudSecretId: '',
   qcloudSecretKey: ''
+<% } %>
 };
 
 module.exports =
