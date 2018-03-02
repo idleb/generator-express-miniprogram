@@ -51,6 +51,12 @@ module.exports = class extends Generator {
         name: 'login',
         message: 'Use Wechat Login for Website',
         default: true
+      },
+      {
+        type: 'confirm',
+        name: 'pm2',
+        message: 'Use PM2 process manager',
+        default: true
       }
     ];
 
@@ -103,6 +109,14 @@ module.exports = class extends Generator {
       });
     }
 
+    if (props.pm2) {
+      pkg = _.merge(pkg, {
+        scripts: {
+          pm2: 'pm2 start process.prod.json --no-daemon'
+        }
+      });
+    }
+
     this.fs.writeJSON(this.destinationPath('package.json'), pkg);
   }
 
@@ -114,9 +128,16 @@ module.exports = class extends Generator {
       );
     }
 
+    if (this.props.pm2) {
+      this.fs.copyTpl(
+        this.templatePath('process.prod.json'),
+        this.destinationPath('process.prod.json'),
+        this.props
+      );
+    }
+
     let files = [
       'bin/www',
-
       'controllers/index.js',
       'controllers/user.js',
       'lib/weixin.js',

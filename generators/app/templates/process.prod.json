@@ -1,0 +1,14 @@
+{
+    "name": "<%= name %>",
+    "script": "./bin/www",
+    "cwd": "./",
+    "exec_mode": "fork",
+    "watch": true,
+    "ignore_watch": ["public","views","tools","test"],
+    "env": {
+        "NODE_ENV": "production"
+    },
+    "engines": {
+        "node": ">=7.6"
+    }
+}
