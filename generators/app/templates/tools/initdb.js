@@ -37,7 +37,9 @@ DB.raw(content).then(
     var auto = new sequelizeAuto(config.db, config.user, config.pass, {
       dialect: 'mysql',
       output: '../models',
-      camelCase: true
+      camelCase: true,
+      spaces: true,
+      indentation: 2
     });
     console.log('开始创建 model 文件...');
     auto.run(err => {
