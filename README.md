@@ -138,15 +138,15 @@ cos: {
 
 ``` bash
 # for start server
-npm start
+npm run start
 # for init mysql and create models
-npm initdb
+npm run initdb
 # for eslint
-npm eslint
+npm run eslint
 # for test, unit test use chai+mocha
-npm test
+npm run test
 # for pm2 start, use process.prod.json
-npm pm2
+npm run pm2
 ```
 
 ## License
