@@ -36,6 +36,7 @@ You will get a MVC directory structure
 ├─.gitignore  
 ├─app.js  
 ├─package.json  
+├─process.prod.json  
 ├─bin/  
 │  ├─www   
 ├─config  
@@ -144,6 +145,8 @@ npm initdb
 npm eslint
 # for test, unit test use chai+mocha
 npm test
+# for pm2 start, use process.prod.json
+npm pm2
 ```
 
 ## License
