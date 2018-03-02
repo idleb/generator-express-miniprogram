@@ -116,6 +116,7 @@ module.exports = class extends Generator {
 
     let files = [
       'bin/www',
+
       'controllers/index.js',
       'controllers/user.js',
       'lib/weixin.js',
@@ -161,6 +162,8 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      bower: false
+    });
   }
 };
