@@ -29,7 +29,7 @@ module.exports = {
         sort: 'desc'
       });
     let total = 0;
-    models.<%= name %>.count().then(count => {
+    models.<%= name %>.count(condition).then(count => {
       total = count;
       return models.<%= name %>.findAll(condition);
     }).then(list => {
@@ -48,7 +48,7 @@ module.exports = {
   },
   update(req, res){
     const id = req.params.id;
-    const data = _.pick(req.body, <%= <%- attributes.map(item => `'${item}'`).join() %>);
+    const data = _.pick(req.body, <%- attributes.map(item => `'${item}'`).join() %>);
     let detail;
     models.<%= name %>.findOne({where: {id}}).then(result => {
       if (!result){
