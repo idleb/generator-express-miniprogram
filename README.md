@@ -61,8 +61,10 @@ You will get a MVC directory structure
 ├─routes/  
 │  ├─api.js  
 │  ├─index.js  
-├─tools/  
-│  ├─db.sql  
+├─tools/
+│  ├─controllerTpl.js    
+│  ├─db.sql
+│  ├─initapi.js    
 │  ├─initdb.js  
 └─views/  
    ├─error.ejs  
@@ -141,6 +143,8 @@ cos: {
 npm run start
 # for init mysql and create models
 npm run initdb
+# for init routes and create controllers
+npm run initapi
 # for eslint
 npm run eslint
 # for test, unit test use chai+mocha
@@ -148,6 +152,9 @@ npm run test
 # for pm2 start, use process.prod.json
 npm run pm2
 ```
+
+initdb -- create tables with db.sql and generate models, model will overwrite
+initapi -- initialized routes and generate controllers with models, controllers will not overwrite
 
 ## License
 

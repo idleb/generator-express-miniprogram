@@ -148,6 +148,8 @@ module.exports = class extends Generator {
       'routes/index.js',
       'tools/db.sql',
       'tools/initdb.js',
+      'tools/controllerTpl.js',
+      'tools/initapi.js',
       'views/error.ejs',
       'views/footer.ejs',
       'views/header.ejs',

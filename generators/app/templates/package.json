@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "initdb": "node tools/initdb.js"
+    "initdb": "node tools/initdb.js",
+    "initapi": "node tools/initapi.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
